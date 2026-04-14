@@ -1,0 +1,17 @@
+name: Push Workflow
+
+on:
+  push:
+    branches:
+      - main   # runs when code is pushed to main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Script
+        run: echo "Code pushed successfully!"
